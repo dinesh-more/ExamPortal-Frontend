@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+
+<div class="signup-form" id="reg-form">
+  <!-- <form class="text-center" #userForm="ngForm" (ngSubmit)="registerUser(userForm.value)"> -->
+  <form class="text-center" (ngSubmit)="registerUser()">
+    <h2>Register</h2>
+    <p class="hint-text">Register here. It's free and only takes a minute.</p>
+    <div class="form-group">
+      <div class="form-group">
+        <input type="text" class="form-control" required minlength="4" [(ngModel)]="user.username" name="username" placeholder="Username">
+      </div>
+      <div class="row">
+        <div class="col"><input type="text" class="form-control" [(ngModel)]="user.firstname" name="firstname" placeholder="First Name"
+            required="required"></div>
+        <div class="col"><input type="text" class="form-control" [(ngModel)]="user.lastname" name="last_name" placeholder="lastname"
+            required="required"></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" [(ngModel)]="user.email" name="email" placeholder="Email" required="required">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" [(ngModel)]="user.password" name="password" placeholder="Password" required="required">
+    </div>
+    <div class="form-group">
+      <input type="number" class="form-control" [(ngModel)]="user.phone" name="phone" placeholder="Phone" required="required">
+    </div>
+    <!-- <div class="form-group">
+      <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of
+          Use</a> &amp; <a href="#">Privacy Policy</a></label>
+    </div> -->
+    <div class="form-group">
+      <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+    </div>
+  </form>
+  <div class="text-center">Already have an account? <a [routerLink]="['/login']" >Sign in</a></div>
+</div>
+
+
+
+
+
+
+<!-- <div class="container">
+    <h2 class="text-center">Register here</h2>
+    <form class="text-center" #userForm="ngForm" (ngSubmit)="registerUser(userForm.value)">
+      <div class="form-group col-md-6">
+        <label>FirstName</label>
+        <input type="text" class="form-control text-center" [(ngModel)]="user.firstname" placeholder="Enter Firstname" name="firstname" required />
+      </div>
+      <div class="form-group col-md-6">
+        <label>LastName</label>
+        <input type="text" class="form-control text-center" [(ngModel)]="user.lastname" placeholder="Enter Lastname" name="lastname">
+      </div>
+      <div class="form-group col-md-6">
+        <label>UserName</label>
+        <input type="text" class="form-control text-center" [(ngModel)]="user.username" placeholder="Enter UserName" name="username">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Password</label>
+        <input type="password" class="form-control text-center" [(ngModel)]="user.password" placeholder="Enter Password" name="password">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Email</label>
+        <input type="email" class="form-control text-center" [(ngModel)]="user.email" placeholder="Enter Email" name="email">
+      </div>
+      <div class="form-group col-md-6">
+        <label>Phone</label>
+        <input type="number" class="form-control text-center" [(ngModel)]="user.phone" placeholder="Enter Phone" name="phone">
+      </div>
+      <button onClickedS type="submit" class="btn btn-primary text-center">Register</button>
+    </form>
+  </div> -->
+
+<!-- {{user | json}} -->
