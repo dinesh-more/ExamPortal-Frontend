@@ -1,2 +1,14 @@
 <app-navbar></app-navbar>
-<h1 class="text-center">Admin Dashboard</h1>
+
+<div class="sidebar">
+    <a class="active" [routerLink]="['/admin-dashboard/']">Home</a>
+    <a [routerLink]="['/admin-dashboard/profile']">Profile</a>
+    <a [routerLink]="['/admin-dashboard/category']">Categories</a>
+    <a [routerLink]="['/admin-dashboard/add-category']">Add Categories</a>
+    <a [routerLink]="['/admin-dashboard/quizze']">Quizze</a>
+    <a [routerLink]="['/admin-dashboard/add-quizze']">Add Quizze</a>
+</div>
+
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

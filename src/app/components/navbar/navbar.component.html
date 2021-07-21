@@ -27,7 +27,8 @@
         <a *ngIf="!isLoggedIn" [routerLink]="['/login']" class="nav-link mr-4">Login</a>
       </div>
       <div class="nav-item dropdown">
-        <a *ngIf="isLoggedIn" (click)="logout()" class="nav-link mr-4">Logout</a>
+        <!-- <a *ngIf="isLoggedIn" (click)="logout()" class="nav-link mr-4">Logout</a> -->
+        <a *ngIf="isLoggedIn" (click)="logout()" class="nav-link mr-4"><i class="fa fa-sign-out" aria-hidden="true"></i></a>
       </div>
       <div class="nav-item dropdown">
         <a *ngIf="!isLoggedIn" [routerLink]="['/register']" class="btn btn-success sign-up-btn">Sign up</a>

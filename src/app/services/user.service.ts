@@ -13,4 +13,8 @@ export class UserService {
     return this.http.post(baseURL + url, user);
   }
 
+  updateUser(url: string, profileDetails: any) {
+    return this.http.put(baseURL + url, profileDetails);
+  }
+
 }
